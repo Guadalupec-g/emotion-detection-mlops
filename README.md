@@ -9,4 +9,4 @@ MLOps_Tarea_FINAL/ ├── emotionapp.py ├── entrenar_modelo.py ├─�
 ## Documentación del modelo
 
 Ver detalles sobre entradas, salidas, preprocesamiento y estructura del modelo en:  
-📁 [`docs/model_info.md`](docs/model_info.md)
+📁 [`docs/model_info.md`](docs/model_info.md) 
