@@ -6,7 +6,8 @@ import joblib
 import os
 
 # Cargar el dataset original
-df = pd.read_csv("/Users/guadalupegarcia/Downloads/emotions.csv")
+df = pd.read_csv("emotions.csv")
+
 
 # Separar features y etiquetas
 X = df.drop("label", axis=1)
