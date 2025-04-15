@@ -1,0 +1,30 @@
+name: Reentrenar y construir imagen
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+
+      - name: Reentrenar el modelo
+        run: |
+          python train_and_save_model.py
+
+      - name: Construir imagen Docker
+        run: |
+          docker build -t emotion-model:latest .
